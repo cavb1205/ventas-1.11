@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+	Usuarios
+{% endblock %}
+
+{% block titulo %}
+	<h1>Lista de Usuarios:</h1>
+{% endblock %}
+
+
+{% block contenido %}
+
+
+	<p><a href="">Agregar Usuario</a></p>
+
+	{% for usuario in object_list %}
+		<p><a href="">{{usuario.id}}</a>	|	{{usuario.nombres}}    |   Dirección:{{usuario.direccion}}    |	Celular: {{usuario.celular}}</p>
+	{% endfor %}
+
+
+
+{% endblock %}

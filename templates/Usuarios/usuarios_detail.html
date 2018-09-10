@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+	Usuarios
+{% endblock %}
+
+{% block titulo %}
+	<h1>Usuario: {{usuarios.id}}</h1>
+{% endblock %}
+
+
+{% block contenido %}
+<h1>Docuemnto: {{usuarios.documento}}</h1>
+<h2>Nombres: {{usuarios.nombres}} {{usuarios.apellidos}}</h2>
+<h2>Telefono: {{usuarios.telefono}}</h2>
+<h2>Celular: {{usuarios.celular}}</h2>
+<h2>Direccion: {{usuarios.direccion}}</h2>
+<h2>Estado: {{usuarios.estado}}</h2>
+
+<p><a href={% url "usuarios:list" %}>Regresar a la lista</a></p>
+
+{% endblock %}

@@ -19,5 +19,5 @@ from Usuarios import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^usuario/', include('Usuarios.urls', namespace='usuarios')),
+    url(r'^usuarios/', include('Usuarios.urls', namespace='usuarios')),
 ]

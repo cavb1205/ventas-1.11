@@ -1,0 +1,4 @@
+<form method="post">{% csrf_token %}
+    <h1>¿Estás seguro que deseas borrar el usuario "{{ object }}"?</h1>
+    <input type="submit" value="Submit" />
+</form>

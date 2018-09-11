@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+	Almacen
+{% endblock %}
+
+{% block titulo %}
+	<h1>Almacen: {{cartera.id}}</h1>
+{% endblock %}
+
+
+{% block contenido %}
+<h1>Responsable: {{cartera.responsable}}</h1>
+<h2>Celular: {{cartera.celular}}</h2>
+<h2>Direccion: {{cartera.direccion}}</h2>
+<h2>Monto: {{cartera.monto}}</h2>
+<h2>Ciudad: {{cartera.ciudad}}</h2>
+
+
+<p><a href={% url "carteras:list" %}>Regresar a la lista</a></p>
+
+{% endblock %}

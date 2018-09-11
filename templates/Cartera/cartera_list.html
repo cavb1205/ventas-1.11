@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+	Almacenes
+{% endblock %}
+
+{% block titulo %}
+	<h1>Lista de Almacenes:</h1>
+{% endblock %}
+
+
+{% block contenido %}
+
+
+	<p><a href={% url "carteras:new" %}>Agregar Almacen</a></p>
+
+	{% for cartera in object_list %}
+		
+		<p><a href={% url "carteras:detail" cartera.id %}>{{cartera.id}}</a>		Responsable: {{cartera.responsable}}, Ciudad: {{cartera.ciudad}} 
+			<a href={% url "carteras:detail" cartera.id %}>Ver</a> <a href={% url "carteras:edit" cartera.id %}>Editar</a> <a href={% url "carteras:delete" cartera.id %}>Borrar</a>
+		</p>
+	{% endfor %}
+
+
+
+{% endblock %}

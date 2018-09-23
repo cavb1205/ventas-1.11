@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+	Bases
+{% endblock %}
+
+{% block titulo %}
+	<h1>Lista de Bases:</h1>
+{% endblock %}
+
+
+{% block contenido %}
+
+
+	<p><a href={% url "bases:new" %}>Agregar Base</a></p>
+
+	{% for base in object_list %}
+		
+		<p><a href={% url "bases:detail" base.id %}>{{base.id}}</a>		Fecha: {{base.fecha_entrega}}, Valor: {{base.valor}} 
+			<a href={% url "bases:detail" base.id %}>Ver</a> <a href={% url "bases:edit" base.id %}>Editar</a> <a href={% url "bases:delete" base.id %}>Borrar</a>
+		</p>
+	{% endfor %}
+
+
+
+{% endblock %}

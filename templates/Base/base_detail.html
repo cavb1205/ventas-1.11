@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+	Base
+{% endblock %}
+
+{% block titulo %}
+	<h1>Base: {{base.id}}</h1>
+{% endblock %}
+
+
+{% block contenido %}
+<h1>Fecha de Ingreso: {{base.fecha_entrega}}</h1>
+<h2>Valor: {{base.valor}}</h2>
+<h2>Observaciones: {{base.observaciones}}</h2>
+<h2>Almacen: {{base.id_cartera}}</h2>
+
+
+<p><a href={% url "bases:list" %}>Regresar a la lista</a></p>
+
+{% endblock %}

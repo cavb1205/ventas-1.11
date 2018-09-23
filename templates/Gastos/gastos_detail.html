@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block seccion %}
+	Gasto
+{% endblock %}
+
+{% block titulo %}
+	<h1>Gasto: {{gastos.id}}</h1>
+{% endblock %}
+
+
+{% block contenido %}
+<h1>Fecha de Gasto: {{gastos.fecha_gasto}}</h1>
+<h2>Tipo de Gasto: {{gastos.tipo_gasto}}</h2>
+<h2>Valor: {{gastos.valor}}</h2>
+<h2>Observaciones: {{gastos.observaciones}}</h2>
+<h2>Almacen: {{gastos.id_cartera}}</h2>
+
+
+<p><a href={% url "gastos:list" %}>Regresar a la lista</a></p>
+
+{% endblock %}

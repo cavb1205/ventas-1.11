@@ -11,9 +11,16 @@
 
 <p>-------------------------------------------------------------------------------------------------</p>
 	<ul>
-		<li><a href="">Inicio</a></li>
-		<li><a href="">Usuarios</a></li>
-		<li><a href="">Gastos</a></li>
+		<li><a href={% url "carteras:list" %}>Almacen</a></li>
+		<li><a href={% url "gastos:list" %}>Gastos</a></li>
+		<li><a href={% url "carteras:list" %}>Bases</a></li>
+		<li><a href={% url "carteras:list" %}>Utilidades</a></li>
+		<li><a href={% url "usuarios:list" %}>Usuarios</a></li>
+		<li><a href={% url "carteras:list" %}>Historial Ventas</a></li>
+		<li><a href={% url "carteras:list" %}>Liq_Ventas</a></li>
+		<li><a href={% url "carteras:list" %}>Liq_VentasxFecha</a></li>
+		<li><a href={% url "carteras:list" %}>Recaudos</a></li>
+		<li><a href={% url "carteras:list" %}>Salir</a></li>
 
 	</ul>
 
